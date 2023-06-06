@@ -18,12 +18,14 @@ import { SignUpComponent } from './components/client/sign-up/sign-up.component';
 import { SignInComponent } from './components/client/sign-in/sign-in.component';
 import { CartPageComponent } from './components/client/cart-page/cart-page.component';
 import { BrandPageComponent } from './components/client/brand-page/brand-page.component';
+import { LayoutProductComponent } from './components/layout/layout-product/layout-product.component';
+
 
 const routes: Routes = [
   {
     path: "", component: LayoutClientComponent, children: [
       { path: "", component: HomePageComponent },
-      { path: "product", component: ProductPageComponent },
+      { path: "product", component: LayoutProductComponent },
       { path: "brand", component: BrandPageComponent },
       { path: "cart", component: CartPageComponent },
       { path: "product/:id", component: ProductDetailComponent },
