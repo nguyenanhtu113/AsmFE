@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +28,9 @@ import { EditProductComponent } from './components/admin/productManager/edit-pro
 import { CartPageComponent } from './components/client/cart-page/cart-page.component';
 import { BannerComponent } from './components/client/banner/banner.component';
 import { BrandPageComponent } from './components/client/brand-page/brand-page.component';
+import { LayoutProductComponent } from './components/layout/layout-product/layout-product.component';
+import { FooterComponent } from './components/client/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -52,11 +57,14 @@ import { BrandPageComponent } from './components/client/brand-page/brand-page.co
     EditProductComponent,
     BrandPageComponent,
     CartPageComponent,
-    BannerComponent
+    BannerComponent,
+    LayoutProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300000,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Laptop AAAA",
+      "brandID": 1
+    },
+    {
+      "id": 2,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Laptop BBBB",
+      "brandID": 2
+    },
+    {
+      "id": 3,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Laptop CCCC",
+      "brandID": 3
+    },
+    {
+      "id": 4,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Laptop DDDD",
+      "brandID": 4
+    },
+    {
+      "id": 5,
+      "img": "https://picsum.photos/200/300",
+      "name": "San Pham C",
+      "price": 300,
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
+      "brand": "Laptop EEEE",
+      "brandID": 5
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Brand 1"
+    },
+    {
+      "id": 2,
+      "name": "Brand 2"
+    },
+    {
+      "id": 3,
+      "name": "Brand 3"
+    },
+    {
+      "id": 4,
+      "name": "Brand 4"
+    },
+    {
+      "id": 5,
+      "name": "Brand 5"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": 0
+    },
+    {
+      "id": 2,
+      "name": "Duong Xuan Van",
+      "email": "xuanvan01@gmail.com",
+      "password": 123456,
+      "role": 1
+    },
+    {
+      "id": 4,
+      "name": "Duong Xuan Van",
+      "email": "xuanvan01@gmail.com",
+      "password": 123456,
+      "role": 1
+    }
+  ]
+}
