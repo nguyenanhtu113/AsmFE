@@ -81,6 +81,10 @@
     {
       "id": 8,
       "name": "Brand 8"
+    },
+    {
+      "name": "Nike",
+      "id": 9
     }
   ],
   "users": [

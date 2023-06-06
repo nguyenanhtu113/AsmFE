@@ -12,4 +12,8 @@ export class BrandService {
   getAllBrand(): Observable<IBrand[]> {
     return this.http.get<IBrand[]>("http://localhost:3000/brands")
   }
+
+  addBrand(brand: IBrand): Observable<IBrand> {
+    return this.http.post<IBrand>("http://localhost:3000/brands", brand)
+  }
 }
