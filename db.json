@@ -6,7 +6,7 @@
       "name": "San Pham C",
       "price": 300000,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Laptop AAAA",
+      "brand": "Brand 1"
       "brandID": 1
     },
     {
@@ -15,8 +15,7 @@
       "name": "San Pham C",
       "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Laptop BBBB",
-      "brandID": 2
+      "brand": "Brand 2"
     },
     {
       "id": 3,
@@ -24,8 +23,7 @@
       "name": "San Pham C",
       "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Laptop CCCC",
-      "brandID": 3
+      "brand": "Brand 6"
     },
     {
       "id": 4,
@@ -33,8 +31,7 @@
       "name": "San Pham C",
       "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Laptop DDDD",
-      "brandID": 4
+      "brand": "Brand 5"
     },
     {
       "id": 5,
@@ -42,8 +39,15 @@
       "name": "San Pham C",
       "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Laptop EEEE",
-      "brandID": 5
+      "brand": "Brand 8"
+    },
+    {
+      "id": 6,
+      "img": "link ảnh",
+      "name": "sản phẩm A",
+      "price": 234234234234,
+      "desc": "mô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩm",
+      "brand": "Brand 6"
     }
   ],
   "brands": [
@@ -66,6 +70,18 @@
     {
       "id": 5,
       "name": "Brand 5"
+    },
+    {
+      "id": 6,
+      "name": "Brand 6"
+    },
+    {
+      "id": 7,
+      "name": "Brand 7"
+    },
+    {
+      "id": 8,
+      "name": "Brand 8"
     }
   ],
   "users": [

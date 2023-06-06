@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { AppRoutingModule } from './app-routing.module';
+
+
+// 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/client/home-page/home-page.component';
 import { ProductPageComponent } from './components/client/product-page/product-page.component';
@@ -64,7 +66,9 @@ import { FooterComponent } from './components/client/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
