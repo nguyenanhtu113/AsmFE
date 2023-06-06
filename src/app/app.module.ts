@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
+
+// 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/client/home-page/home-page.component';
 import { ProductPageComponent } from './components/client/product-page/product-page.component';
@@ -56,7 +60,10 @@ import { BrandPageComponent } from './components/client/brand-page/brand-page.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
