@@ -52,7 +52,7 @@
   "brands": [
     {
       "id": 1,
-      "name": "Brand 1"
+      "name": "Brand 1 ắp đết"
     },
     {
       "id": 2,
@@ -81,6 +81,10 @@
     {
       "id": 8,
       "name": "Brand 8"
+    },
+    {
+      "name": "Nike",
+      "id": 9
     }
   ],
   "users": [
