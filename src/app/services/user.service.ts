@@ -23,5 +23,5 @@ export class UserService {
   updateUser(user: IUser): Observable<IUser> {
     return this.http.put<IUser>(`http://localhost:3000/users/${user.id}`, user)
   }
-
+  
 }

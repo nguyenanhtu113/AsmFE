@@ -44,9 +44,9 @@
       "id": 6,
       "img": "link ảnh",
       "name": "sản phẩm A",
-      "price": 234234234234,
+      "price": 12121212,
       "desc": "mô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩm",
-      "brand": "Brand 2"
+      "brand": "Brand 6"
     }
   ],
   "brands": [
@@ -103,7 +103,7 @@
       "name": "Duong Xuan Van",
       "email": "xuanvan01@gmail.com",
       "password": 123456,
-      "role": 1
+      "role": 2
     }
   ]
 }
