@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -7,9 +8,20 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./layout-client.component.css']
 })
 export class LayoutClientComponent {
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router,) { }
   logout() {
     this.authService.logout();
-    // Thực hiện các thao tác khác sau khi đăng xuất thành công, ví dụ như chuyển hướng đến trang đăng nhập, vv.
+    window.location.reload();
   }
+
+  userEmail!: string | null;
+  userRole!: string | null;
+
+  ngOnInit() {
+    this.userEmail = this.authService.getUserEmail();
+    this.userRole = this.authService.getUserRole();
+  }
+
+
 }
+
