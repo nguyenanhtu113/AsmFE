@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./edit-brand.component.css']
 })
 export class EditBrandComponent {
-  brand!: IBrand
+  brand!: IBrand;
   brandForm = this.formBuilder.group({
     name: ['']
   })
@@ -24,6 +24,7 @@ export class EditBrandComponent {
       const id = param.get('id');
       this.brandService.getOneBrand(id).subscribe(brand => {
         this.brand = brand;
+        
         this.brandForm.patchValue({
           name: brand.name,
         })
@@ -33,11 +34,11 @@ export class EditBrandComponent {
 
   onHandleEdit() {
     if (this.brandForm.valid) {
-      const product: IBrand = {
-        id: this.brand.id,
+      const brand: IBrand = {
+        _id: this.brand._id,
         name: this.brandForm.value.name || "",
       }
-      this.brandService.editBrand(product).subscribe((data) => {
+      this.brandService.editBrand(brand).subscribe((data) => {
         this.back.navigate(['admin', 'brand'])
       })
     }

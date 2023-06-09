@@ -19,9 +19,12 @@ import { SignInComponent } from './components/client/sign-in/sign-in.component';
 import { CartPageComponent } from './components/client/cart-page/cart-page.component';
 import { BrandPageComponent } from './components/client/brand-page/brand-page.component';
 import { LayoutProductComponent } from './components/layout/layout-product/layout-product.component';
+import { authGuard } from './auth.guard';
 
 
 const routes: Routes = [
+  { path: "signin", component: SignInComponent },
+  { path: "signup", component: SignUpComponent },
   {
     path: "", component: LayoutClientComponent, children: [
       { path: "", component: HomePageComponent },
@@ -30,12 +33,10 @@ const routes: Routes = [
       { path: "cart", component: CartPageComponent },
       { path: "product/:id", component: ProductDetailComponent },
       { path: "user", component: SignInComponent },
-      { path: "signin", component: SignInComponent },
-      { path: "signup", component: SignUpComponent },
     ]
   },
   {
-    path: "admin", component: LayoutAdminComponent, children: [
+    path: "admin", component: LayoutAdminComponent, canActivate: [authGuard], children: [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
       { path: "dashboard", component: DashboardComponent },
       { path: "product", component: ListProductComponent },
