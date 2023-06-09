@@ -13,7 +13,7 @@ export class ListBrandComponent {
   constructor(private brandService: BrandService) {
     this.brandService.getAllBrand().subscribe(data => {
       this.brands = data
-    })
+    }, error => console.log(error))
   }
 
 }

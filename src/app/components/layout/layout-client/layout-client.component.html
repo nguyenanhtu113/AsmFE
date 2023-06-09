@@ -22,7 +22,7 @@
         </li>
       </ul>
       <!-- Header Icons -->
-      <div class="hidden xl:flex items-center space-x-5 items-center">
+      <div class="hidden xl:flex items-center space-x-5">
         <a class="flex items-center hover:text-gray-200" routerLink="cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@
           <div class="inline-block">
             <a
               class="flex items-center hover:text-gray-200"
-              routerLink="*"
+              routerLink="#"
               aria-haspopup="true"
               aria-expanded="true"
               aria-controls="headlessui-menu-items-117"
@@ -74,23 +74,23 @@
             </a>
           </div>
           <!--  -->
-      
+
           <div
             class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95"
           >
             <div
-              class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+              class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg outline-none"
               aria-labelledby="headlessui-menu-button-1"
               id="headlessui-menu-items-117"
               role="menu"
             >
               <!-- nếu chưa đăng nhập, chỉ hiển thị sign up, sign in -->
-      
-              <div class="py-1">
+
+              <!-- <div class="py-1">
                 <a
                   routerLink="signin"
                   tabindex="0"
-                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
                   role="menuitem"
                   >Đăng nhập</a
                 >
@@ -99,14 +99,14 @@
                 <a
                   routerLink="signup"
                   tabindex="3"
-                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
                   role="menuitem"
                   >Đăng ký</a
                 >
               </div>
-      
+       -->
               <!--nếu đăng nhập rồi thì show cái này  -->
-              <div class="px-4 py-3">
+              <div class="px-4 py-3 border-b-2">
                 <p class="text-sm leading-5 text-black">Đăng nhập bằng</p>
                 <p class="text-sm font-medium leading-5 text-gray-900 truncate">
                   <!-- show email người dùng -->
@@ -117,20 +117,22 @@
               <div class="py-1">
                 <a
                   routerLink="admin"
-                  tabindex="0"
-                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                  tabindex="3"
+                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left border-b-2"
                   role="menuitem"
                   >Vào trang quản trị</a
                 >
               </div>
               <div class="py-1">
-                <a
-                  routerLink=""
-                  tabindex="3"
-                  class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
-                  role="menuitem"
-                  >Đăng xuất</a
-                >
+                <button (click)="logout()">
+                  <a
+                    routerLink=""
+                    tabindex="3"
+                    class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                    role="menuitem"
+                    >Đăng xuất</a
+                  >
+                </button>
               </div>
             </div>
           </div>

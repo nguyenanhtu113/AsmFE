@@ -7,21 +7,23 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BrandService {
+  API_URL: string = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) { }
+
   getAllBrand(): Observable<IBrand[]> {
-    return this.http.get<IBrand[]>("http://localhost:3000/brands")
+    return this.http.get<IBrand[]>(`${this.API_URL}/categories`)
   }
 
   getOneBrand(id: any): Observable<IBrand> {
-    return this.http.get<IBrand>("http://localhost:3000/brands/" + id)
+    return this.http.get<IBrand>(`${this.API_URL}/categories/` + id)
   }
 
   addBrand(brand: IBrand): Observable<IBrand> {
-    return this.http.post<IBrand>("http://localhost:3000/brands", brand)
+    return this.http.post<IBrand>(`${this.API_URL}/categories`, brand)
   }
 
   editBrand(brand: IBrand): Observable<IBrand> {
-    return this.http.put<IBrand>(`http://localhost:3000/brands/${brand.id}`, brand)
+    return this.http.put<IBrand>(`${this.API_URL}/categories/${brand._id}`, brand)
   }
 }
