@@ -18,7 +18,7 @@ export class AuthService {
   signin(user: any): Observable<any> {
     return this.http.post(`${this.API_URL}/signin`, user)
   }
-  
+
   logout(): void {
     // Xóa thông tin đăng nhập từ localStorage hoặc thực hiện các thao tác đăng xuất khác
     localStorage.removeItem('credential');
@@ -27,4 +27,16 @@ export class AuthService {
   isAuthenticated(): any {
     return JSON.parse(localStorage.getItem('credential')!) || {};
   }
+
+  getUserEmail(): string | null {
+    const credential = JSON.parse(localStorage.getItem('credential')!) || {};
+    return credential?.user?.email || null;
+  }
+
+  getUserRole(): string | null {
+    const credential = JSON.parse(localStorage.getItem('credential')!) || {};
+    return credential?.user?.role || null;
+  }
+
 }
+
