@@ -11,13 +11,14 @@ export class ListUserComponent {
   users: IUser[] = [];
 
   constructor(private userService: UserService) {
-    this.userService.getAllUser().subscribe(data => {
-      this.users = data
-    })
+    this.userService.getAllUser().subscribe((response) => {
+      this.users = response.data
+    },error => console.log(error))
   }
+
   removeUser(id: any) {
     this.userService.deleteUser(id).subscribe(() => {
-      this.users = this.users.filter(item => item.id !== id)
+      this.users = this.users.filter(item => item._id !== id)
     })
   }
 }

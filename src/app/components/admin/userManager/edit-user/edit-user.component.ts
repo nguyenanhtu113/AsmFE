@@ -12,10 +12,7 @@ import { FormBuilder } from '@angular/forms';
 export class EditUserComponent {
   user!: IUser;
   userForm = this.fb.group({
-    name: [''],
-    email: [''],
-    password: [''],
-    role: 1
+    role: ['']
   })
   constructor(
     private userService: UserService,
@@ -25,26 +22,24 @@ export class EditUserComponent {
   ) {
     this.route.paramMap.subscribe(param => {
       const id = param.get("id");
-      this.userService.getOneUser(id).subscribe(user => {
-        this.user = user;
-
-        this.userForm.patchValue({
-          name: user.name,
-          email: user.email,
-          password: user.password,
-          role: user.role,
-        })
+      this.userService.getOneUser(id).subscribe(response => {
+        const user: IUser = response.data;
+        if (user !== undefined && user !== null) {
+          this.user = user;
+          this.userForm.patchValue({
+            role: user.role
+          })
+        } else {
+          // Xử lý trường hợp không tìm thấy sản phẩm
+        }
       })
     })
   }
   onHandleEdit() {
     if (this.userForm.valid) {
       const user: IUser = {
-        id: this.user.id,
-        name: this.userForm.value.name || "",
-        email: this.userForm.value.email || "",
-        password: this.userForm.value.password || "",
-        role: this.userForm.value.role || 0,
+        _id: this.user._id,
+        role: this.userForm.value.role || "",
       }
       this.userService.updateUser(user).subscribe((data) => {
         this.back.navigate(["admin", "user"])
