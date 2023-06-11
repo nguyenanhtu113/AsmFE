@@ -49,8 +49,8 @@ export class AddProductComponent {
   }
   loadBrands() {
     // Gán giá trị từ API hoặc cơ sở dữ liệu vào mảng `brands`
-    this.brandService.getAllBrand().subscribe(data => {
-      this.brands = data
+    this.brandService.getAllBrand().subscribe((response) => {
+      this.brands = response.data
     })
   }
 }

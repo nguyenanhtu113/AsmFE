@@ -11,19 +11,19 @@ export class BrandService {
 
   constructor(private http: HttpClient) { }
 
-  getAllBrand(): Observable<IBrand[]> {
-    return this.http.get<IBrand[]>(`${this.API_URL}/categories`)
+  getAllBrand(): Observable<{data:IBrand[]}> {
+    return this.http.get<{data:IBrand[]}>(`${this.API_URL}/brand`)
   }
 
   getOneBrand(id: any): Observable<IBrand> {
-    return this.http.get<IBrand>(`${this.API_URL}/categories/` + id)
+    return this.http.get<IBrand>(`${this.API_URL}/brand/` + id)
   }
 
   addBrand(brand: IBrand): Observable<IBrand> {
-    return this.http.post<IBrand>(`${this.API_URL}/categories`, brand)
+    return this.http.post<IBrand>(`${this.API_URL}/brand`, brand)
   }
 
   editBrand(brand: IBrand): Observable<IBrand> {
-    return this.http.put<IBrand>(`${this.API_URL}/categories/${brand._id}`, brand)
+    return this.http.put<IBrand>(`${this.API_URL}/brand/${brand._id}`, brand)
   }
 }

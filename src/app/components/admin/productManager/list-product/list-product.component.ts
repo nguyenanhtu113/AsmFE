@@ -10,16 +10,18 @@ import { ProductService } from 'src/app/services/product.service';
 export class ListProductComponent {
   products: IProduct[] = [];
 
+
+ 
   constructor(private productService: ProductService) {
-    this.productService.getAllProduct().subscribe(data => {
-      this.products = data
-    })
+    this.productService.getAllProduct().subscribe((response) => {
+      this.products = response.data
+    },error => console.log(error))
   }
 
 
   removeProduct(id: any) {
     this.productService.deleteProduct(id).subscribe(() => {
-      this.products = this.products.filter(item => item.id !== id)
+      this.products = this.products.filter(item => item._id !== id)
     })
   }
 }
