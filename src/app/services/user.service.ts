@@ -8,20 +8,20 @@ import { IUser } from '../interfaces/user';
   providedIn: 'root'
 })
 export class UserService {
-  // private baseURL = `http://localhost:3000/api`
+ 
   constructor(private http: HttpClient) { }
 
-  getAllUser(): Observable<IUser[]> {
-    return this.http.get<IUser[]>("http://localhost:3000/users");
+  getAllUser(): Observable<{data:IUser[]}> {
+    return this.http.get<{data:IUser[]}>('http://localhost:8080/api/user');
   }
-  getOneUser(id: any): Observable<IUser> {
-    return this.http.get<IUser>("http://localhost:3000/users/" + id);
+  getOneUser(id: any): Observable<{data:IUser}> {
+    return this.http.get<{data:IUser}>('http://localhost:8080/api/user/' + id);
   }
   deleteUser(id: any): Observable<IUser> {
-    return this.http.delete<IUser>("http://localhost:3000/users/" + id);
+    return this.http.delete<IUser>('http://localhost:8080/api/user/' + id);
   }
   updateUser(user: IUser): Observable<IUser> {
-    return this.http.put<IUser>(`http://localhost:3000/users/${user.id}`, user)
+    return this.http.put<IUser>(`http://localhost:8080/api/user/${user._id}`, user)
   }
   
 }

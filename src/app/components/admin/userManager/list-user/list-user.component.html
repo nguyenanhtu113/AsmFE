@@ -3,7 +3,6 @@
       <thead class="text-xs text-gray-700 uppercase bg-gray-200">
         <tr>
           <th scope="col" class="px-6 py-3">#</th>
-          <th scope="col" class="px-6 py-3">ID</th>
           <th scope="col" class="px-6 py-3">Tên</th>
           <th scope="col" class="px-6 py-3">Email</th>
           <th scope="col" class="px-6 py-3">Role</th>
@@ -16,7 +15,7 @@
           *ngFor="let user of users; let i = index"
           [user]="user"
           [index]="i"
-          (onRemove)="removeUser(user.id)"
+          (onRemove)="removeUser(user._id)"
           class="border-b-2"
         ></tr>
       </tbody>
