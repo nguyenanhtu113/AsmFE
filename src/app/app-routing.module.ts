@@ -16,7 +16,7 @@ import { AddProductComponent } from './components/admin/productManager/add-produ
 import { ListProductComponent } from './components/admin/productManager/list-product/list-product.component';
 import { SignUpComponent } from './components/client/sign-up/sign-up.component';
 import { SignInComponent } from './components/client/sign-in/sign-in.component';
-import { CartPageComponent } from './components/client/cart-page/cart-page.component';
+import { CartPageComponent } from './components/client/cart-page/cart-page.component'; 
 import { BrandPageComponent } from './components/client/brand-page/brand-page.component';
 import { LayoutProductComponent } from './components/layout/layout-product/layout-product.component';
 import { authGuard } from './auth.guard';

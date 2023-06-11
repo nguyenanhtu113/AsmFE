@@ -61,7 +61,7 @@ import { FooterComponent } from './components/client/footer/footer.component';
     CartPageComponent,
     BannerComponent,
     LayoutProductComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

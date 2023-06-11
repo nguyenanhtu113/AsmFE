@@ -1,1 +1,6 @@
-<p>cart-page works!</p>
+<div *ngFor="let item of cartItems">
+  <h4>{{ item.name }}</h4>
+  <p>Price: {{ item.price }}</p>
+  <button (click)="removeFromCart(item)">Remove</button>
+  <hr />
+</div>
