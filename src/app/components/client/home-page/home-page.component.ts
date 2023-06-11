@@ -9,8 +9,8 @@ import { IProduct } from 'src/app/interfaces/product';
 export class HomePageComponent {
   products : IProduct[] = []
   constructor(private ProductService:ProductService){
-    this.ProductService.getAllProduct().subscribe(data =>{
-      this.products = data
-    })
+    this.ProductService.getAllProduct().subscribe((response) => {
+      this.products = response.data
+    },error => console.log(error))
   }
 }

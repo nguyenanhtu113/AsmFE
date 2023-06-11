@@ -7,20 +7,22 @@ import { IProduct } from '../interfaces/product';
 })
 export class ProductService {
 
+  API_URL: string = 'http://localhost:8080/api';
+
   constructor(private http: HttpClient) { }
-  getAllProduct(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>("http://localhost:3000/products")
+  getAllProduct(): Observable<{data:IProduct[]}> {
+    return this.http.get<{data:IProduct[]}>('http://localhost:8080/api/product')
   }
   getOneProduct(id: any): Observable<IProduct> {
-    return this.http.get<IProduct>("http://localhost:3000/products/" + id)
+    return this.http.get<IProduct>('http://localhost:8080/api/product/' +id)
   }
   addProduct(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>("http://localhost:3000/products", product)
+    return this.http.post<IProduct>('http://localhost:8080/api/product', product)
   }
   deleteProduct(id: any): Observable<IProduct> {
-    return this.http.delete<IProduct>("http://localhost:3000/products/" + id)
+    return this.http.delete<IProduct>('http://localhost:8080/api/product' + id)
   }
   updateProduct(product: IProduct): Observable<IProduct> {
-    return this.http.put<IProduct>(`http://localhost:3000/products/${product.id}`, product)
+    return this.http.put<IProduct>(`http://localhost:8080/api/product/${product._id}`, product)
   }
 }

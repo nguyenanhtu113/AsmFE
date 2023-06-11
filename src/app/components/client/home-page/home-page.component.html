@@ -44,7 +44,7 @@
     <h1 class="flex justify-center text-3xl font-bold mb-4 mt-8">Đang giảm giá </h1>
     <div class="grid grid-cols-4 gap-4">
       <div *ngFor="let product of products" class="mt-4 w-[260px] ">
-        <p><a routerLink="/product/{{product.id}}"><img [src]="product.img" alt=""
+        <p><a routerLink="/product/{{product._id}}"><img [src]="product.img" alt=""
               class="w-[230px] h-[230px] hv-img-pro"></a></p>
         <p class="text-lg mt-5 font-medium hover:text-red-500">{{product.name}}</p>
         <p>{{product.price}} VND</p>
@@ -65,7 +65,7 @@
 
     <div class="grid grid-cols-4 gap-4">
       <div *ngFor="let product of products" class="mt-4 w-[260px] ">
-        <p><a routerLink="/product/{{product.id}}"><img [src]="product.img" alt=""
+        <p><a routerLink="/product/{{product._id}}"><img [src]="product.img" alt=""
               class="w-[230px] h-[230px] hv-img-pro"></a></p>
         <p class="text-lg mt-5 font-medium hover:text-red-500">{{product.name}}</p>
         <p>{{product.price}} VND</p>

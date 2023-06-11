@@ -11,9 +11,9 @@ export class ListBrandComponent {
   brands: IBrand[] = [];
 
   constructor(private brandService: BrandService) {
-    this.brandService.getAllBrand().subscribe(data => {
-      this.brands = data
-    }, error => console.log(error))
+    this.brandService.getAllBrand().subscribe((response) => {
+      this.brands = response.data
+    },error => console.log(error))
   }
 
 }

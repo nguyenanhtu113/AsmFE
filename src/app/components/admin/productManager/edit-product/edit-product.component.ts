@@ -49,7 +49,7 @@ export class EditProductComponent {
   onHandleEdit() {
     if (this.productForm.valid) {
       const product: IProduct = {
-        id: this.product.id,
+        _id: this.product._id,
         img: this.productForm.value.img || "",
         name: this.productForm.value.name || "",
         price: this.productForm.value.price || 0,
@@ -69,8 +69,8 @@ export class EditProductComponent {
   }
   loadBrands() {
     // Gán giá trị từ API hoặc cơ sở dữ liệu vào mảng `brands`
-    this.brandService.getAllBrand().subscribe(data => {
-      this.brands = data
+    this.brandService.getAllBrand().subscribe((response) => {
+      this.brands = response.data
     })
   }
 }
