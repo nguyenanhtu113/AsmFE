@@ -31,14 +31,14 @@ export class EditProductComponent {
     this.route.paramMap.subscribe(param => {
       const id = param.get('id');
       this.productService.getOneProduct(id).subscribe(product => {
-        this.product = product;
+        // this.product = product;
 
         this.productForm.patchValue({
-          name: product.name,
-          price: product.price,
-          img: product.img,
-          desc: product.desc,
-          brand: product.brand
+          // name: product.name,
+          // price: product.price,
+          // img: product.img,
+          // desc: product.desc,
+          // brand: product.brand
         })
       })
     })

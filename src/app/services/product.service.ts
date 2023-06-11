@@ -13,8 +13,8 @@ export class ProductService {
   getAllProduct(): Observable<{data:IProduct[]}> {
     return this.http.get<{data:IProduct[]}>('http://localhost:8080/api/product')
   }
-  getOneProduct(id: any): Observable<IProduct> {
-    return this.http.get<IProduct>('http://localhost:8080/api/product/' +id)
+  getOneProduct(id: any): Observable<{data:IProduct}> {
+    return this.http.get<{data:IProduct}>('http://localhost:8080/api/product/' +id)
   }
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>('http://localhost:8080/api/product', product)
