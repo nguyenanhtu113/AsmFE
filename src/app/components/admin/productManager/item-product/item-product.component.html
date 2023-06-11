@@ -4,14 +4,13 @@
   >
   {{ index + 1 }}
 </th>
-<td class="w-2 px-6 py-4">{{ product._id }}</td>
 <td class="px-6 py-4">
   <img src="{{ product.img }}" class="w-[30px] h-[30px]" />
 </td>
 <td class="px-6 py-4">{{ product.name }}</td>
 <td class="px-6 py-4">{{ product.price }}</td>
 <td class="px-6 py-4 w-[500px]">{{ product.desc }}</td>
-<td class="px-6 py-4">{{ product.brand }}</td>
+<td class="px-6 py-4">{{ product.brandId }}</td>
 <td>
   <button
     (click)="removeProduct(product._id)"
