@@ -30,21 +30,23 @@ export class EditProductComponent {
   ) {
     this.route.paramMap.subscribe(param => {
       const id = param.get('id');
-      this.productService.getOneProduct(id).subscribe(product => {
-        // this.product = product;
-
-        this.productForm.patchValue({
-          // name: product.name,
-          // price: product.price,
-          // img: product.img,
-          // desc: product.desc,
-          // brand: product.brand
-        })
+      this.productService.getOneProduct(id).subscribe(response => {
+        const product: IProduct = response.data;
+        if (product !== undefined && product !== null) {
+          this.product = product;
+          this.productForm.patchValue({
+            name: product.name,
+            price: product.price,
+            img: product.img,
+            desc: product.desc,
+            brand: product.brand
+          })
+        } else {
+          // Xử lý trường hợp không tìm thấy sản phẩm
+        }
       })
     })
   }
-
-
 
   onHandleEdit() {
     if (this.productForm.valid) {
