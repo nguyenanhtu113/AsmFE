@@ -1,4 +1,7 @@
-.hv-img-pro:hover {  opacity: 0.5;  filter: alpha(opacity=500)}
+.hv-img-pro:hover {  
+    transform: scale(1.05,1.05);
+    animation-delay: 1.5s;
+}
 .hv-img-branch:hover{
     transform: scale(1.05,1.05);
     animation-delay: 1.5s;
