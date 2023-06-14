@@ -35,18 +35,10 @@
     {
       "id": 5,
       "img": "https://picsum.photos/200/300",
-      "name": "San Pham C",
+      "name": "San Pham D",
       "price": 300,
       "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore non distinctio quod vel nihil dicta omnis. Pariatur vero similique quas dignissimos, tenetur dolores consequatur enim voluptatem sit deleniti natus.",
-      "brand": "Brand 8"
-    },
-    {
-      "id": 6,
-      "img": "link ảnh",
-      "name": "sản phẩm A",
-      "price": 234234234234,
-      "desc": "mô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩmmô tả sản phẩm",
-      "brand": "Brand 2"
+      "brand": "Nike"
     }
   ],
   "brands": [
